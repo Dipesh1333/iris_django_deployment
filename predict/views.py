@@ -24,7 +24,7 @@ def predict_chances(request):
         petal_width = float(request.POST.get('petal_width'))
 
         # Unpickle the model and putting/collecting that data in the model variable
-        model = pd.read_pickle(r"/home/dipesh/new_model.pickle")
+        model = pd.read_pickle(r"new_model.pickle")
 
         # Make new prediction (with the data we get from the users) using the pretrained model
         result = model.predict([[sepal_length, sepal_width, petal_length, petal_width]])
